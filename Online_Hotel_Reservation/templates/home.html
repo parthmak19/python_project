@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1 style="color:brown"><u>Welcome to the Online Hotel Reservation System!</u></h1>
+
+{% if customer.is_authenticated %}
+<a href="logout.html">LogOut</a><br>
+
+{% else %}
+<a href="signup.html">SignUp</a>
+<a href="login.html">LogIn</a><br>
+
+{% endif %}
+
+</body>
+</html>
