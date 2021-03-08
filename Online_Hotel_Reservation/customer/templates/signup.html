@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <title>form</title>
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'signup.css' %}" />
   </head>
   <body>
     <div class="main">
       <div class="register">
         <h2>Signup Here</h2>
         <form id="register" method="post">
+         {% csrf_token %}
           <label>User Name: </label><br />
           <input
             type="text"
@@ -52,9 +53,10 @@
             id="Password"  
             name="Password" 
           /><br />
-          <input type="submit" />
+                <input type="submit" placeholder="submit">
         </form>
-      </div>
+        </div>
     </div>
+    
   </body>
 </html>

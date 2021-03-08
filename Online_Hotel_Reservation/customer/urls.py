@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url
-from customer.views import signup
+from customer.views import signup,login,invalidlogin,home
 from . import views
 urlpatterns = [
     path("signup",views.signup,name="signup"),
-    
+    path("login",views.login,name="login"),
+    path(r'^invalidlogin/$',views.invalidlogin,name="invalidlogin"),  
+    path(r'',views.home,name="home"),  
 ]
